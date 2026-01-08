@@ -1422,7 +1422,7 @@ body {
 .footer-action-btns{
   position: fixed;
   bottom: 110px;
-  left: 40%;
+  left: 38%;
   transform: translateX(195px);
   display: flex;
   flex-direction: column;
@@ -1431,11 +1431,11 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.goto-btn, .chat-btn { 
+.goto-btn, .chat-btn{ 
   border: none;
   background-color: transparent;
-  width: 30px; 
-  height: 30px; 
+  width: 25px; 
+  height: 25px; 
   cursor: pointer; 
   transition: all 0.3s;
   display: flex;
