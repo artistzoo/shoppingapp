@@ -31,6 +31,11 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.app-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 #onboarding-wrap {
   display: block;
   position: fixed;
@@ -46,6 +51,7 @@ body {
 
 #wrap,
 #detail-wrap {
+  width: 390px;
   overflow: visible;
   height: auto;
   display: none;
@@ -1414,7 +1420,7 @@ body {
 .footer-action-btns{
   position: fixed;
   bottom: 110px;
-  left: 47%;
+  left: 40%;
   transform: translateX(195px);
   display: flex;
   flex-direction: column;

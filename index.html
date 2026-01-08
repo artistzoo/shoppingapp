@@ -50,467 +50,468 @@
     </div>
   </div>
   <!-- MAIN -->
-  <div id="wrap" >
-    <nav class="main-navbar">
-      <div class="logo-area"><img src="image/logo.png" alt="GRANHAND 로고" height="36"></div>
-      <div class="navbar-right">
-        <button class="nav-btn" onclick="openLogin()">Login</button>
-        <button class="nav-btn" onclick="openJoin()">Join</button>
-        <button class="nav-btn menu-btn" onclick="openMenuModal()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+  <div class="app-container">
+    <div id="wrap" >
+      <nav class="main-navbar">
+        <div class="logo-area"><img src="image/logo.png" alt="GRANHAND 로고" height="36"></div>
+        <div class="navbar-right">
+          <button class="nav-btn" onclick="openLogin()">Login</button>
+          <button class="nav-btn" onclick="openJoin()">Join</button>
+          <button class="nav-btn menu-btn" onclick="openMenuModal()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+      <div class="sub-navbar">
+        <button onclick="moveSection('shop')">SHOP</button>
+        <button onclick="moveSection('index')">INDEX</button>
+        <button onclick="moveSection('offline')">STORE</button>
+        <button onclick="moveSection('journal')">JOURNAL</button>
+        <button onclick="moveSection('coffee')">Komfortable</button>
       </div>
-    </nav>
-    <div class="sub-navbar">
-      <button onclick="moveSection('shop')">SHOP</button>
-      <button onclick="moveSection('index')">INDEX</button>
-      <button onclick="moveSection('offline')">STORE</button>
-      <button onclick="moveSection('journal')">JOURNAL</button>
-      <button onclick="moveSection('coffee')">Komfortable</button>
-    </div>
-  
-    <!-- 메인 슬라이드(점+스크롤바) -->
-    <section class="main-sld-section" id="main-sld">
-      <div class="main-slider">
-        <div class="main-slide active">
-          <img src="image/main1.jpg" alt="Main Banner 1">
-          <div class="main-slide-caption">
-            이른 아침 도착한 곳은<br>
-            맑게 갠 하늘을 거울처럼 반사하고 있었다.<br>
-            어젯밤 내린 비의 여운이 조금은 남아있는 풀밭을<br>
-            걷다 보니 저 멀리 수풀 사이로 그녀의 차가 보인다.
+    
+      <!-- 메인 슬라이드(점+스크롤바) -->
+      <section class="main-sld-section" id="main-sld">
+        <div class="main-slider">
+          <div class="main-slide active">
+            <img src="image/main1.jpg" alt="Main Banner 1">
+            <div class="main-slide-caption">
+              이른 아침 도착한 곳은<br>
+              맑게 갠 하늘을 거울처럼 반사하고 있었다.<br>
+              어젯밤 내린 비의 여운이 조금은 남아있는 풀밭을<br>
+              걷다 보니 저 멀리 수풀 사이로 그녀의 차가 보인다.
+            </div>
+          </div>
+          <div class="main-slide">
+            <img src="image/main2.jpg" alt="Main Banner 2">
+            <div class="main-slide-caption">
+              영화의 한 장면처럼 그녀는 보닛에 반쯤 걸터앉아<br>
+              책을 읽고 있었고, 가까이 다가가자 나를 슬쩍 쳐다보는<br>
+              눈에는 이미 장난기가 가득했다. 
+            </div>
+          </div>
+          <div class="main-slide">
+            <img src="image/main3.jpg" alt="Main Banner 3">
+            <div class="main-slide-caption">
+              나는 그녀 옆에 앉아 말없이 풍경을 바라본다.<br>
+              아직은 따뜻한 엔진의 온기가 남아있다.<br><br>
+              -EPEUL.Perfume, GRANHAND.
+            </div>
+          </div>
+          <div class="main-sld-indicators">
+            <span class="sld-indicator active"></span>
+            <span class="sld-indicator"></span>
+            <span class="sld-indicator"></span>
+          </div>
+          <div class="scroll-down">
+            SCROLL
+            <img src="image/scrollbar.png" alt="scrollbar">
           </div>
         </div>
-        <div class="main-slide">
-          <img src="image/main2.jpg" alt="Main Banner 2">
-          <div class="main-slide-caption">
-            영화의 한 장면처럼 그녀는 보닛에 반쯤 걸터앉아<br>
-            책을 읽고 있었고, 가까이 다가가자 나를 슬쩍 쳐다보는<br>
-            눈에는 이미 장난기가 가득했다. 
-          </div>
-        </div>
-        <div class="main-slide">
-          <img src="image/main3.jpg" alt="Main Banner 3">
-          <div class="main-slide-caption">
-            나는 그녀 옆에 앉아 말없이 풍경을 바라본다.<br>
-            아직은 따뜻한 엔진의 온기가 남아있다.<br><br>
-            -EPEUL.Perfume, GRANHAND.
-          </div>
-        </div>
-        <div class="main-sld-indicators">
-          <span class="sld-indicator active"></span>
-          <span class="sld-indicator"></span>
-          <span class="sld-indicator"></span>
-        </div>
-        <div class="scroll-down">
-          SCROLL
-          <img src="image/scrollbar.png" alt="scrollbar">
-        </div>
-      </div>
-    </section>
-  
-    <!-- 이벤트: 이미지 단일 (390*294) -->
-    <section class="main-event">
-      <img src="image/event.png" alt="이벤트 이미지" width="390" height="294" class="event-img-full">
-    </section>
-  
-    <!-- SHOP 영역 -->
-    <section class="main-shop" id="shop">
-      <h2 class="title">SHOP
-      <span class="cross-line"></span>
-      </h2>
-      <h3 class="subtitle">Gift Set</h3>
-      <div class="shop-listcol">
-        <div class="shop-bigbox">
-          <img src="image/giftset1.jpg">
-          <div class="shop-prodname">
-            <p>Multi Perfume & Sachet Set</p>
-          </div>
-        </div>
-        <div class="shop-link" onclick="openDetail()">
+      </section>
+    
+      <!-- 이벤트: 이미지 단일 (390*294) -->
+      <section class="main-event">
+        <img src="image/event.png" alt="이벤트 이미지" width="390" height="294" class="event-img-full">
+      </section>
+    
+      <!-- SHOP 영역 -->
+      <section class="main-shop" id="shop">
+        <h2 class="title">SHOP
+        <span class="cross-line"></span>
+        </h2>
+        <h3 class="subtitle">Gift Set</h3>
+        <div class="shop-listcol">
           <div class="shop-bigbox">
-            <h3 class="subtitle">[New Arrival]</h3>
-            <img src="image/detail/detail1.jpg">
+            <img src="image/giftset1.jpg">
             <div class="shop-prodname">
-              <p>Body Wash</p>
-              <span>
-                새롭게 선보이는 바디워시로 매일의 배스 타임을 하루 중<br>
-                가장 즐거운 휴식의 시간으로 만들어 주세요.
+              <p>Multi Perfume & Sachet Set</p>
+            </div>
+          </div>
+          <div class="shop-link" onclick="openDetail()">
+            <div class="shop-bigbox">
+              <h3 class="subtitle">[New Arrival]</h3>
+              <img src="image/detail/detail1.jpg">
+              <div class="shop-prodname">
+                <p>Body Wash</p>
+                <span>
+                  새롭게 선보이는 바디워시로 매일의 배스 타임을 하루 중<br>
+                  가장 즐거운 휴식의 시간으로 만들어 주세요.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="shop-bigbox">
+            <h3 class="subtitle"></h3>
+            <img src="image/spray.jpg">
+            <div class="shop-prodname">
+              <p>Nature Spray</p>
+              <span>내추럴 스프레이는 순차적으로 판매 종료될 예정입니다.<br>
+              준비된 수량 소진 시, 재입고는 어려운 점 양해 부탁드립니다.
               </span>
             </div>
+            <!-- More 버튼 -->
+            <div class="journal-more-wrapper">
+              <button class="journal-more" onclick="window.open('https://granhand.com','_blank')">
+                More
+                <span class="more-arrow">→</span>
+              </button>
+            </div>
           </div>
+        </div>
+    
+        <!-- 메타 아이콘 6개/갤러리구간 -->
+        <div class="shop-meta-icons">
+          <div class="meta-icon active" onclick="changeMetaTab(0)"><img src="image/icon1.png"><div></div></div>
+          <div class="meta-icon" onclick="changeMetaTab(1)"><img src="image/icon2.png"><div></div></div>
+          <div class="meta-icon" onclick="changeMetaTab(2)"><img src="image/icon3.png"><div></div></div>
+          <div class="meta-icon" onclick="changeMetaTab(3)"><img src="image/icon4.png"><div></div></div>
+          <div class="meta-icon" onclick="changeMetaTab(4)"><img src="image/icon5.png"><div></div></div>
+          <div class="meta-icon" onclick="changeMetaTab(5)"><img src="image/icon6.png"><div></div></div>
         </div>
         <div class="shop-bigbox">
-          <h3 class="subtitle"></h3>
-          <img src="image/spray.jpg">
-          <div class="shop-prodname">
-            <p>Nature Spray</p>
-            <span>내추럴 스프레이는 순차적으로 판매 종료될 예정입니다.<br>
-            준비된 수량 소진 시, 재입고는 어려운 점 양해 부탁드립니다.
-            </span>
+          <h2 class="title">INDEX
+            <span class="cross-line"></span>
+          </h2>
+            <h3 class="subtitle">Signature</h3>
           </div>
-          <!-- More 버튼 -->
-          <div class="journal-more-wrapper">
-            <button class="journal-more" onclick="window.open('https://granhand.com','_blank')">
-              More
-              <span class="more-arrow">→</span>
-            </button>
+        <div class="shop-meta-gallery">
+          <div class="meta-bigimg-col">
+            <img id="metaBigImg" src="image/index/marne.png">
+          </div>
+          
+          <div class="meta-img-row">
+            <img src="image/index/marne.png" class="meta-thumb active" onclick="changeMetaGallery(0)">
+            <img src="image/index/sopni1.png" class="meta-thumb" onclick="changeMetaGallery(1)">
+            <img src="image/index/cask1.png" class="meta-thumb" onclick="changeMetaGallery(2)">
+            <img src="image/index/weimar1.png" class="meta-thumb" onclick="changeMetaGallery(3)">
+            <img src="image/index/soie1.png" class="meta-thumb" onclick="changeMetaGallery(4)">
+            <img src="image/index/modle1.png" class="meta-thumb" onclick="changeMetaGallery(5)">
           </div>
         </div>
-      </div>
-  
-      <!-- 메타 아이콘 6개/갤러리구간 -->
-      <div class="shop-meta-icons">
-        <div class="meta-icon active" onclick="changeMetaTab(0)"><img src="image/icon1.png"><div></div></div>
-        <div class="meta-icon" onclick="changeMetaTab(1)"><img src="image/icon2.png"><div></div></div>
-        <div class="meta-icon" onclick="changeMetaTab(2)"><img src="image/icon3.png"><div></div></div>
-        <div class="meta-icon" onclick="changeMetaTab(3)"><img src="image/icon4.png"><div></div></div>
-        <div class="meta-icon" onclick="changeMetaTab(4)"><img src="image/icon5.png"><div></div></div>
-        <div class="meta-icon" onclick="changeMetaTab(5)"><img src="image/icon6.png"><div></div></div>
-      </div>
-      <div class="shop-bigbox">
-        <h2 class="title">INDEX
+      </section>
+    
+      <!-- STORE 오프라인 지점: 인디케이터, 슬라이드 세트 -->
+      <section class="main-store" id="offline">
+        <h2 class="title">STORE
           <span class="cross-line"></span>
         </h2>
-          <h3 class="subtitle">Signature</h3>
+        <div class="store-slide-wrap">
+          <div class="store-slide-set active" id="store-slide-0">
+            <img class="store-bigimg" src="image/store/가회/4.jpg" width="350" height="300">
+            <div class="store-thumb-wrap">
+              <img src="image/store/가회/1.jpg" width="80" height="80">
+              <img src="image/store/가회/2.jpg" width="80" height="80">
+              <img src="image/store/가회/3.jpg" width="80" height="80">
+              <img src="image/store/가회/4.jpg" width="80" height="80">
+            </div>
+            <div class="store-info">
+              <span>그랑핸드 가회 [Gahoe]</span>
+              <span>[서울 종로구 북촌동 11길 61]</span>
+            </div>
+          </div>
+          <div class="store-slide-set" id="store-slide-1">
+            <img class="store-bigimg" src="image/store/서교/12.jpg" width="350" height="300">
+            <div class="store-thumb-wrap">
+              <img src="image/store/서교/1.jpg" width="80" height="80">
+              <img src="image/store/서교/2.jpg" width="80" height="80">
+              <img src="image/store/서교/5.jpg" width="80" height="80">
+              <img src="image/store/서교/6.jpg" width="80" height="80">
+            </div>
+            <div class="store-info">
+              <span>그랑핸드 & 콤포타블 커피 서교 [Seogyo]</span>
+              <span>[서울 마포구 동교로 109-7]</span>
+            </div>
+          </div>
+          <div class="store-slide-set" id="store-slide-2">
+            <img class="store-bigimg" src="image/store/광화문/3.jpg" width="350" height="300">
+            <div class="store-thumb-wrap">
+              <img src="image/store/광화문/1.jpg" width="80" height="80">
+              <img src="image/store/광화문/2.jpg" width="80" height="80">
+              <img src="image/store/광화문/4.jpg" width="80" height="80">
+              <img src="image/store/광화문/7.jpg" width="80" height="80">
+            </div>
+            <div class="store-info">
+              <span>그랑핸드 광화문 [Gwanghwamun]</span>
+              <span>[서울 종로구 종로 33, 1층]</span>
+            </div>
+          </div>
         </div>
-      <div class="shop-meta-gallery">
-        <div class="meta-bigimg-col">
-          <img id="metaBigImg" src="image/index/marne.png">
+        <div class="store-indicator">
+          <span class="store-dot active" onclick="changeStoreSlide(0)"></span>
+          <span class="store-dot" onclick="changeStoreSlide(1)"></span>
+          <span class="store-dot" onclick="changeStoreSlide(2)"></span>
+        </div>
+        <!-- More 버튼 -->
+        <div class="journal-more-wrapper">
+          <button class="journal-more" onclick="window.open('https://granhand.com','_blank')">
+            More
+            <span class="more-arrow">→</span>
+          </button>
+        </div>
+      </section>
+    
+      <!-- JOURNAL -->
+      <section class="main-journal" id="journal">
+        <h2 class="title">JOURNAL
+          <span class="cross-line"></span>
+        </h2>
+        <div class="journal-bigimg">
+          <img id="journalBigImg" src="image/journal/news/3.jpeg" width="350" height="300">
+          <div class="journal-info">
+            <span>News</span>
+            <span>제6회 그랑핸드 필름사진상 수상작 발표</span>
+            <span>2025.09.26  |  조회수 1288</span>
+          </div>
         </div>
         
-        <div class="meta-img-row">
-          <img src="image/index/marne.png" class="meta-thumb active" onclick="changeMetaGallery(0)">
-          <img src="image/index/sopni1.png" class="meta-thumb" onclick="changeMetaGallery(1)">
-          <img src="image/index/cask1.png" class="meta-thumb" onclick="changeMetaGallery(2)">
-          <img src="image/index/weimar1.png" class="meta-thumb" onclick="changeMetaGallery(3)">
-          <img src="image/index/soie1.png" class="meta-thumb" onclick="changeMetaGallery(4)">
-          <img src="image/index/modle1.png" class="meta-thumb" onclick="changeMetaGallery(5)">
-        </div>
-      </div>
-    </section>
-  
-    <!-- STORE 오프라인 지점: 인디케이터, 슬라이드 세트 -->
-    <section class="main-store" id="offline">
-      <h2 class="title">STORE
-        <span class="cross-line"></span>
-      </h2>
-      <div class="store-slide-wrap">
-        <div class="store-slide-set active" id="store-slide-0">
-          <img class="store-bigimg" src="image/store/가회/4.jpg" width="350" height="300">
-          <div class="store-thumb-wrap">
-            <img src="image/store/가회/1.jpg" width="80" height="80">
-            <img src="image/store/가회/2.jpg" width="80" height="80">
-            <img src="image/store/가회/3.jpg" width="80" height="80">
-            <img src="image/store/가회/4.jpg" width="80" height="80">
-          </div>
-          <div class="store-info">
-            <span>그랑핸드 가회 [Gahoe]</span>
-            <span>[서울 종로구 북촌동 11길 61]</span>
+        <!-- 슬라이드 컨테이너 -->
+        <div class="journal-thumbs-container">
+          <div class="journal-thumbs" id="journalThumbs">
+            <div class="journal-thumb" data-index="0">
+              <img src="image/journal/culture/1.png">
+              <span>Culture</span> 
+            </div>
+            <div class="journal-thumb" data-index="1">
+              <img src="image/journal/life/1.jpg">
+              <span>Life</span> 
+            </div>
+            <div class="journal-thumb" data-index="2">
+              <img src="image/journal/team/1.jpeg">
+              <span>Team</span> 
+            </div>
+            <div class="journal-thumb" data-index="3">
+              <img src="image/journal/essay/1.jpg">
+              <span>Essay</span> 
+            </div>
+            <div class="journal-thumb" data-index="4">
+              <img src="image/journal/film/1.jpg">
+              <span>Film</span> 
+            </div>
           </div>
         </div>
-        <div class="store-slide-set" id="store-slide-1">
-          <img class="store-bigimg" src="image/store/서교/12.jpg" width="350" height="300">
-          <div class="store-thumb-wrap">
-            <img src="image/store/서교/1.jpg" width="80" height="80">
-            <img src="image/store/서교/2.jpg" width="80" height="80">
-            <img src="image/store/서교/5.jpg" width="80" height="80">
-            <img src="image/store/서교/6.jpg" width="80" height="80">
-          </div>
-          <div class="store-info">
-            <span>그랑핸드 & 콤포타블 커피 서교 [Seogyo]</span>
-            <span>[서울 마포구 동교로 109-7]</span>
-          </div>
-        </div>
-        <div class="store-slide-set" id="store-slide-2">
-          <img class="store-bigimg" src="image/store/광화문/3.jpg" width="350" height="300">
-          <div class="store-thumb-wrap">
-            <img src="image/store/광화문/1.jpg" width="80" height="80">
-            <img src="image/store/광화문/2.jpg" width="80" height="80">
-            <img src="image/store/광화문/4.jpg" width="80" height="80">
-            <img src="image/store/광화문/7.jpg" width="80" height="80">
-          </div>
-          <div class="store-info">
-            <span>그랑핸드 광화문 [Gwanghwamun]</span>
-            <span>[서울 종로구 종로 33, 1층]</span>
-          </div>
-        </div>
-      </div>
-      <div class="store-indicator">
-        <span class="store-dot active" onclick="changeStoreSlide(0)"></span>
-        <span class="store-dot" onclick="changeStoreSlide(1)"></span>
-        <span class="store-dot" onclick="changeStoreSlide(2)"></span>
-      </div>
-      <!-- More 버튼 -->
-      <div class="journal-more-wrapper">
-        <button class="journal-more" onclick="window.open('https://granhand.com','_blank')">
-          More
-          <span class="more-arrow">→</span>
-        </button>
-      </div>
-    </section>
-  
-    <!-- JOURNAL -->
-    <section class="main-journal" id="journal">
-      <h2 class="title">JOURNAL
-        <span class="cross-line"></span>
-      </h2>
-      <div class="journal-bigimg">
-        <img id="journalBigImg" src="image/journal/news/3.jpeg" width="350" height="300">
-        <div class="journal-info">
-          <span>News</span>
-          <span>제6회 그랑핸드 필름사진상 수상작 발표</span>
-          <span>2025.09.26  |  조회수 1288</span>
-        </div>
-      </div>
       
-      <!-- 슬라이드 컨테이너 -->
-      <div class="journal-thumbs-container">
-        <div class="journal-thumbs" id="journalThumbs">
-          <div class="journal-thumb" data-index="0">
-            <img src="image/journal/culture/1.png">
-            <span>Culture</span> 
-          </div>
-          <div class="journal-thumb" data-index="1">
-            <img src="image/journal/life/1.jpg">
-            <span>Life</span> 
-          </div>
-          <div class="journal-thumb" data-index="2">
-            <img src="image/journal/team/1.jpeg">
-            <span>Team</span> 
-          </div>
-          <div class="journal-thumb" data-index="3">
-            <img src="image/journal/essay/1.jpg">
-            <span>Essay</span> 
-          </div>
-          <div class="journal-thumb" data-index="4">
-            <img src="image/journal/film/1.jpg">
-            <span>Film</span> 
+        <!-- 인디케이터로 슬라이드 제어 -->
+        <div class="journal-indicator">
+          <span class="journal-dot active" onclick="changeJournalSlide(0)"></span>
+          <span class="journal-dot" onclick="changeJournalSlide(1)"></span>
+        </div>
+      
+        <!-- More 버튼 -->
+        <div class="journal-more-wrapper">
+          <button class="journal-more" onclick="window.open('https://granhand.com','_blank')">
+            More
+            <span class="more-arrow">→</span>
+          </button>
+        </div>
+      </section>
+    
+      <!-- Komfortable Coffee -->
+      <section class="main-coffee" id="coffee">
+        <div class="coffee-txt">
+          <h2 class="title last" style="--line-width:250px">Komfortabel COFFEE
+            <span class="cross-line"></span>
+          </h2>
+          <p>Fresh Mango Whole Cake</p>
+          <span>생망고 홀케이크 예약안내</span>
+        </div>
+        <div class="coffee-mainimg-col">
+          <img id="coffeeBigImg" src="image/coffee/cake1.webp">
+          <p>콤포타블 커피의 시그니처 케이크로 소중한 날을 더 특별하게 만드세요.</p>
+        </div>
+        <!-- More 버튼 -->
+        <div class="journal-more-wrapper">
+          <button class="coffee-more" onclick="window.open('https://granhand.com','_blank')">
+            More
+            <span class="more-arrow">→</span>
+          </button>
+        </div>
+        <div class="coffee-small">
+          <h3>Recommend</h3>
+          <div class="coffee-smallimgs">
+            <div class="coffee-prod" onclick="changeCoffeeImg(0)"><img src="image/coffee/coffee1.webp" width="165" height="165"><div class="coffee-name">너티 브라운 드립백<br><span class="coffee-price">19,000 KRW / 10ea</span></div></div>
+            <div class="coffee-prod" onclick="changeCoffeeImg(1)"><img src="image/coffee/coffee2.webp" width="165" height="165"><div class="coffee-name">Komfortabel Glass Mug<br><span class="coffee-price">20,000 KRW / 콤포타블 글라스 머그</span></div></div>
+            <div class="coffee-prod" onclick="changeCoffeeImg(2)"><img src="image/coffee/coffee3.webp" width="165" height="165"><div class="coffee-name">콤포타블 디카페인<br><span class="coffee-price">16,000 KRW / 200g</span></div></div>
+            <div class="coffee-prod" onclick="changeCoffeeImg(3)"><img src="image/coffee/coffee4.webp" width="165" height="165"><div class="coffee-name">너티 브라운 블렌드<br><span class="coffee-price">14,000 KRW / 200g</span></div></div>
           </div>
         </div>
-      </div>
-    
-      <!-- 인디케이터로 슬라이드 제어 -->
-      <div class="journal-indicator">
-        <span class="journal-dot active" onclick="changeJournalSlide(0)"></span>
-        <span class="journal-dot" onclick="changeJournalSlide(1)"></span>
-      </div>
-    
-      <!-- More 버튼 -->
-      <div class="journal-more-wrapper">
-        <button class="journal-more" onclick="window.open('https://granhand.com','_blank')">
-          More
-          <span class="more-arrow">→</span>
-        </button>
-      </div>
-    </section>
+      </section>
+    </div>
   
-    <!-- Komfortable Coffee -->
-    <section class="main-coffee" id="coffee">
-      <div class="coffee-txt">
-        <h2 class="title last" style="--line-width:250px">Komfortabel COFFEE
-          <span class="cross-line"></span>
-        </h2>
-        <p>Fresh Mango Whole Cake</p>
-        <span>생망고 홀케이크 예약안내</span>
-      </div>
-      <div class="coffee-mainimg-col">
-        <img id="coffeeBigImg" src="image/coffee/cake1.webp">
-        <p>콤포타블 커피의 시그니처 케이크로 소중한 날을 더 특별하게 만드세요.</p>
-      </div>
-      <!-- More 버튼 -->
-      <div class="journal-more-wrapper">
-        <button class="coffee-more" onclick="window.open('https://granhand.com','_blank')">
-          More
-          <span class="more-arrow">→</span>
+    <!-- DETAIL -->
+    <div id="detail-wrap">
+      <!-- 상단 네비게이션 -->
+      <nav class="detail-nav">
+        <button class="nav-back" onclick="closeDetail()"><img src="image/backbtn.png" alt="icon">
         </button>
-      </div>
-      <div class="coffee-small">
+        <div class="nav-icons">
+          <button class="nav-icon search"><img src="image/search.png" alt="icon"></button>
+          <button class="nav-icon cart"><img src="image/Cart.png" alt="cart"></button>
+          <button class="nav-btn menu-btn" onclick="openMenuModal()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+  
+      <!-- 메인 이미지 -->
+      <section class="product-image">
+        <img src="image/detail/detail1.jpg" alt="Body Wash" id="mainProductImg">
+      </section>
+  
+      <!-- 제품 정보 -->
+      <section class="product-info">
+        <h1 class="product-title">Susie Salmon Body Wash</h1>
+        <div class="product-price">
+          <span class="price-original">39,000원 KRW / 600ml</span>
+          <span class="price-current">특별한 향과 넉넉한 용량의 바디워시로 매일의 배스 타임을<br>
+          하루 중 가장 즐거운 휴식 시간으로 만들어 보세요.</span>
+          <span class="share"><img src="image/share.png" alt="share"></span>
+        </div>
+      </section>
+  
+      <!-- 구매 버튼 -->
+      <section class="purchase-buttons">
+        <a class="btn-present"><img src="image/present.png" alt="present"></a>
+        <a class="btn-cart"><img src="image/npay.png" alt="npay"></a>
+        <a class="btn-buy" onclick="openPurchaseModal()"><img src="image/buy.png" alt="buy"></a>
+      </section>
+  
+      <!-- 상세 정보 탭 -->
+      <section class="detail-tabs">
+        <div class="tab-buttons">
+          <a class="tab-btn active" onclick="changeTab('detail')">상세정보</a>
+          <a class="tab-btn" onclick="changeTab('return')">반품/교환</a>
+          <a class="tab-btn" onclick="changeTab('qna')">Q&A</a>
+        </div>
+  
+        <!-- 상세정보 탭 내용 -->
+        <div class="tab-content active" id="tab-detail">
+          <div class="detail-images">
+            <img src="image/detail/notice.png" alt="상세이미지1">
+            <img src="image/detail/1.png" alt="상세이미지2">
+            <img src="image/detail/detail2.webp" alt="상세이미지3">
+            <img src="image/detail/detail3.webp" alt="상세이미지4">
+            <img src="image/detail/detail4.webp" alt="상세이미지5">
+            <img src="image/detail/detail5.webp" alt="상세이미지6">
+            <img src="image/detail/kakao.png" alt="상세이미지7">
+            <img src="image/detail/info.png" alt="상세이미지8">
+          </div>
+        </div>
+  
+        <!-- 반품/교환 탭 내용 -->
+        <div class="tab-content" id="tab-return">
+          <div class="return-info">
+            <h4>반품/교환 택배사</h4>
+            <p>CJ대한통운</p>
+  
+            <h4>반품/배송비(편도)</h4>
+            <p>3,000 KRW</p>
+  
+            <h4>반품/교환 주소지</h4>
+            <p>경기 파주시 조리읍 탑삭골길 77-43(능안리) 3,4동 짐풀 물류센터<br>(10935)</p>
+  
+            <h4>반품/교환 가능 기준일</h4>
+            <p>상품 수령 후 7일 이내 (단, 제품이 표시광고 내용과 다르거나 불량 등<br>계약과 다르게 이행된 경우는 제품 수령일로부터 3개월이내나 그 사실을<br>안 날 또는 알 수 있었던 날부터 30일 이내 교환/반품이 가능)</p>
+            
+            <h4>반품/교환 불가능 사유</h4>
+            <p>1. 단순변심으로 인한 교환/반품 신청이 상품 수령한 날로부터<br>7일이 경과한 경우</p>
+            <p>2. 고객님의 사용 또는 일부 소비에 의해 상품의 가치가 훼손된 경우 및<br>미개봉 스티커가 훼손된 경우(제품 불량인 경우 제외)</p>
+            <p>3. 불량이 아닐 경우에는 제품은 반송됩니다. (왕복 배송비 소비자 부담)</p>
+            <p>4. 스탬핑 서비스를 받은 제품일 경우(멀티퍼퓸, 퍼퓸, 디퓨저, 캔들)</p>
+            <p>5. 소비자의 주문에 따라 개별적으로 생산되는 상품이 제작에 들어간 경우</p>
+            
+            <h4>재화동의 교환 반품 보증 조건 및 품질보증기준<br>
+                / 소비자피해보상의 처리, 재화등에 대한 불만 처리 및 소비자와<br>
+                사업자 사이의 분쟁처리에 관한 사항</h4>
+            <p>소비자분장해결기준(공정거래위원회 고시) 및 관계법령에 따릅니다.</p>
+  
+            <h4>제품하자 오배송 등에 따른 청약철회 등의 경우 청약철회 등의<br>
+                기한 및 통신판매업자가 부담하는 반품비용 등에 관한 정보</h4>
+            <p>전자상거래 등에서의 소비자보호에 관한 법률 등에 의한 제품의 하자 또는<br>
+              오배송 등으로 인한 청약철회의 경우에는 상품 수령 후 3개월 이내,<br>
+              그 사실을 안 날 또는 알 수 있었던 날로부터 30일 이내에 청약 철회를 할 수 있으며, 반품 비용은통신판매업자가 부담합니다.</p>
+  
+            <h4>대금을 환불받기 위한 방법과 환불이 지연될 경우<br>
+                지연배상금을 지급받을 수 있다는 사실 및<br>
+                지연배상금 지급의 구체적인 조건 절차</h4>
+            <p>
+              주문취소 및 대금의 환불은 마이페이지 또는 채널톡을 통해 신청할 수 있으며,<br> 전자상거래 등에서의 소비자보호에 관한 법률에 따라 소비자는 청약철회<br>후 판매자가 재화 등을 반환 및 확인한 날로부터 3영업일 이내에 지급받은<br> 대금의 환급을 정당한 사유 없이 지연하는 때에는 소비자는 지연기간에 대해<br>서 연 15%의 지연배상금을 판매자에게 청구할 수 있습니다.<br><br>
+              ***<br>
+              거래에 관한 약관의 내용은<br>
+              페이지 하단의 이용약관 링크를 통해 확인 할 수 있습니다.
+            </p>
+  
+          </div>
+        </div>
+  
+        <!-- Q&A 탭 내용 -->
+        <div class="tab-content" id="tab-qna">
+          <div class="qna-section">
+            <div class="qna-header">
+              <h3>Q&A</h3>
+              <button class="btn-qna-write">문의하기</button>
+            </div>
+            
+            <div class="qna-list">
+              <div class="qna-item">
+                <div class="qna-question">
+                  <span class="qna-status answered">답변완료</span>
+                  <span class="qna-title">배송 문의드립니다</span>
+                  <span class="qna-date">2025.01.03</span>
+                </div>
+              </div>
+              <div class="qna-item">
+                <div class="qna-question">
+                  <span class="qna-status pending">답변대기</span>
+                  <span class="qna-title">향이 어떤가요?</span>
+                  <span class="qna-date">2025.01.02</span>
+                </div>
+              </div>
+              <div class="qna-empty">
+                등록된 문의가 없습니다.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- 추천 상품 -->
+      <section class="recommended-products">
         <h3>Recommend</h3>
-        <div class="coffee-smallimgs">
-          <div class="coffee-prod" onclick="changeCoffeeImg(0)"><img src="image/coffee/coffee1.webp" width="165" height="165"><div class="coffee-name">너티 브라운 드립백<br><span class="coffee-price">19,000 KRW / 10ea</span></div></div>
-          <div class="coffee-prod" onclick="changeCoffeeImg(1)"><img src="image/coffee/coffee2.webp" width="165" height="165"><div class="coffee-name">Komfortabel Glass Mug<br><span class="coffee-price">20,000 KRW / 콤포타블 글라스 머그</span></div></div>
-          <div class="coffee-prod" onclick="changeCoffeeImg(2)"><img src="image/coffee/coffee3.webp" width="165" height="165"><div class="coffee-name">콤포타블 디카페인<br><span class="coffee-price">16,000 KRW / 200g</span></div></div>
-          <div class="coffee-prod" onclick="changeCoffeeImg(3)"><img src="image/coffee/coffee4.webp" width="165" height="165"><div class="coffee-name">너티 브라운 블렌드<br><span class="coffee-price">14,000 KRW / 200g</span></div></div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-
-  <!-- DETAIL -->
-  <div id="detail-wrap">
-    <!-- 상단 네비게이션 -->
-    <nav class="detail-nav">
-      <button class="nav-back" onclick="closeDetail()"><img src="image/backbtn.png" alt="icon">
-      </button>
-      <div class="nav-icons">
-        <button class="nav-icon search"><img src="image/search.png" alt="icon"></button>
-        <button class="nav-icon cart"><img src="image/Cart.png" alt="cart"></button>
-        <button class="nav-btn menu-btn" onclick="openMenuModal()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </nav>
-
-    <!-- 메인 이미지 -->
-    <section class="product-image">
-      <img src="image/detail/detail1.jpg" alt="Body Wash" id="mainProductImg">
-    </section>
-
-    <!-- 제품 정보 -->
-    <section class="product-info">
-      <h1 class="product-title">Susie Salmon Body Wash</h1>
-      <div class="product-price">
-        <span class="price-original">39,000원 KRW / 600ml</span>
-        <span class="price-current">특별한 향과 넉넉한 용량의 바디워시로 매일의 배스 타임을<br>
-        하루 중 가장 즐거운 휴식 시간으로 만들어 보세요.</span>
-        <span class="share"><img src="image/share.png" alt="share"></span>
-      </div>
-    </section>
-
-    <!-- 구매 버튼 -->
-    <section class="purchase-buttons">
-      <a class="btn-present"><img src="image/present.png" alt="present"></a>
-      <a class="btn-cart"><img src="image/npay.png" alt="npay"></a>
-      <a class="btn-buy" onclick="openPurchaseModal()"><img src="image/buy.png" alt="buy"></a>
-    </section>
-
-    <!-- 상세 정보 탭 -->
-    <section class="detail-tabs">
-      <div class="tab-buttons">
-        <a class="tab-btn active" onclick="changeTab('detail')">상세정보</a>
-        <a class="tab-btn" onclick="changeTab('return')">반품/교환</a>
-        <a class="tab-btn" onclick="changeTab('qna')">Q&A</a>
-      </div>
-
-      <!-- 상세정보 탭 내용 -->
-      <div class="tab-content active" id="tab-detail">
-        <div class="detail-images">
-          <img src="image/detail/notice.png" alt="상세이미지1">
-          <img src="image/detail/1.png" alt="상세이미지2">
-          <img src="image/detail/detail2.webp" alt="상세이미지3">
-          <img src="image/detail/detail3.webp" alt="상세이미지4">
-          <img src="image/detail/detail4.webp" alt="상세이미지5">
-          <img src="image/detail/detail5.webp" alt="상세이미지6">
-          <img src="image/detail/kakao.png" alt="상세이미지7">
-          <img src="image/detail/info.png" alt="상세이미지8">
-        </div>
-      </div>
-
-      <!-- 반품/교환 탭 내용 -->
-      <div class="tab-content" id="tab-return">
-        <div class="return-info">
-          <h4>반품/교환 택배사</h4>
-          <p>CJ대한통운</p>
-
-          <h4>반품/배송비(편도)</h4>
-          <p>3,000 KRW</p>
-
-          <h4>반품/교환 주소지</h4>
-          <p>경기 파주시 조리읍 탑삭골길 77-43(능안리) 3,4동 짐풀 물류센터<br>(10935)</p>
-
-          <h4>반품/교환 가능 기준일</h4>
-          <p>상품 수령 후 7일 이내 (단, 제품이 표시광고 내용과 다르거나 불량 등<br>계약과 다르게 이행된 경우는 제품 수령일로부터 3개월이내나 그 사실을<br>안 날 또는 알 수 있었던 날부터 30일 이내 교환/반품이 가능)</p>
-          
-          <h4>반품/교환 불가능 사유</h4>
-          <p>1. 단순변심으로 인한 교환/반품 신청이 상품 수령한 날로부터<br>7일이 경과한 경우</p>
-          <p>2. 고객님의 사용 또는 일부 소비에 의해 상품의 가치가 훼손된 경우 및<br>미개봉 스티커가 훼손된 경우(제품 불량인 경우 제외)</p>
-          <p>3. 불량이 아닐 경우에는 제품은 반송됩니다. (왕복 배송비 소비자 부담)</p>
-          <p>4. 스탬핑 서비스를 받은 제품일 경우(멀티퍼퓸, 퍼퓸, 디퓨저, 캔들)</p>
-          <p>5. 소비자의 주문에 따라 개별적으로 생산되는 상품이 제작에 들어간 경우</p>
-          
-          <h4>재화동의 교환 반품 보증 조건 및 품질보증기준<br>
-              / 소비자피해보상의 처리, 재화등에 대한 불만 처리 및 소비자와<br>
-              사업자 사이의 분쟁처리에 관한 사항</h4>
-          <p>소비자분장해결기준(공정거래위원회 고시) 및 관계법령에 따릅니다.</p>
-
-          <h4>제품하자 오배송 등에 따른 청약철회 등의 경우 청약철회 등의<br>
-              기한 및 통신판매업자가 부담하는 반품비용 등에 관한 정보</h4>
-          <p>전자상거래 등에서의 소비자보호에 관한 법률 등에 의한 제품의 하자 또는<br>
-            오배송 등으로 인한 청약철회의 경우에는 상품 수령 후 3개월 이내,<br>
-            그 사실을 안 날 또는 알 수 있었던 날로부터 30일 이내에 청약 철회를 할 수 있으며, 반품 비용은통신판매업자가 부담합니다.</p>
-
-          <h4>대금을 환불받기 위한 방법과 환불이 지연될 경우<br>
-              지연배상금을 지급받을 수 있다는 사실 및<br>
-              지연배상금 지급의 구체적인 조건 절차</h4>
-          <p>
-            주문취소 및 대금의 환불은 마이페이지 또는 채널톡을 통해 신청할 수 있으며,<br> 전자상거래 등에서의 소비자보호에 관한 법률에 따라 소비자는 청약철회<br>후 판매자가 재화 등을 반환 및 확인한 날로부터 3영업일 이내에 지급받은<br> 대금의 환급을 정당한 사유 없이 지연하는 때에는 소비자는 지연기간에 대해<br>서 연 15%의 지연배상금을 판매자에게 청구할 수 있습니다.<br><br>
-            ***<br>
-            거래에 관한 약관의 내용은<br>
-            페이지 하단의 이용약관 링크를 통해 확인 할 수 있습니다.
-          </p>
-
-        </div>
-      </div>
-
-      <!-- Q&A 탭 내용 -->
-      <div class="tab-content" id="tab-qna">
-        <div class="qna-section">
-          <div class="qna-header">
-            <h3>Q&A</h3>
-            <button class="btn-qna-write">문의하기</button>
-          </div>
-          
-          <div class="qna-list">
-            <div class="qna-item">
-              <div class="qna-question">
-                <span class="qna-status answered">답변완료</span>
-                <span class="qna-title">배송 문의드립니다</span>
-                <span class="qna-date">2025.01.03</span>
-              </div>
+  
+        <div class="recommend-slider">
+          <div class="recommend-track">
+            <div class="recommend-card">
+              <img src="image/detail/recommend1.png">
+              <p>AINOA Perfume</p>
+              <span>55,000 KRW / 130ml</span>
             </div>
-            <div class="qna-item">
-              <div class="qna-question">
-                <span class="qna-status pending">답변대기</span>
-                <span class="qna-title">향이 어떤가요?</span>
-                <span class="qna-date">2025.01.02</span>
-              </div>
-            </div>
-            <div class="qna-empty">
-              등록된 문의가 없습니다.
+            <div class="recommend-card">
+              <img src="image/detail/recommend2.png">
+              <p>Marine Orchid Multi Perfume</p>
+              <span>55,000 KRW / 130ml</span>
             </div>
           </div>
+            <div class="recommend-txt">
+              <p>
+                <span class="num1">1.</span>
+                  스탬핑 문구 10자 초과, 국문, 욕설 및 선정적인 내용 기재 시<br>
+                  작업 불가하여 스탬핑 없이 발송됩니다.
+              </p>
+              <p>
+                <span class="num2">2.</span>
+                패키지 리뉴얼로 라벨지 색상 및 디자인이 다른 제품이 발송될 수 있습니다.<br>
+                구매 시 참고 부탁드립니다.
+              </p>
+            </div>
         </div>
-      </div>
-    </section>
-
-    <!-- 추천 상품 -->
-    <section class="recommended-products">
-      <h3>Recommend</h3>
-
-      <div class="recommend-slider">
-        <div class="recommend-track">
-          <div class="recommend-card">
-            <img src="image/detail/recommend1.png">
-            <p>AINOA Perfume</p>
-            <span>55,000 KRW / 130ml</span>
-          </div>
-          <div class="recommend-card">
-            <img src="image/detail/recommend2.png">
-            <p>Marine Orchid Multi Perfume</p>
-            <span>55,000 KRW / 130ml</span>
-          </div>
-        </div>
-          <div class="recommend-txt">
-            <p>
-              <span class="num1">1.</span>
-                스탬핑 문구 10자 초과, 국문, 욕설 및 선정적인 내용 기재 시<br>
-                작업 불가하여 스탬핑 없이 발송됩니다.
-            </p>
-            <p>
-              <span class="num2">2.</span>
-              패키지 리뉴얼로 라벨지 색상 및 디자인이 다른 제품이 발송될 수 있습니다.<br>
-              구매 시 참고 부탁드립니다.
-            </p>
-          </div>
-      </div>
-    </section>
-
+      </section>
+  
+    </div>
   </div>
 
   <!-- 구매하기 모달 -->
