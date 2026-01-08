@@ -22,6 +22,7 @@
 }
 html,body{
   height: auto;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 body {
@@ -52,6 +53,7 @@ body {
 #wrap,
 #detail-wrap {
   width: 390px;
+  min-height: 100vh;
   overflow: visible;
   height: auto;
   display: none;
