@@ -20,7 +20,10 @@
     font-weight: 700;
     font-display: swap;
 }
-html,body{ overflow-x: hidden;}
+html,body{
+  height: auto;
+  overflow-y: auto;
+}
 body {
   margin: 0;
   padding: 0;
@@ -42,10 +45,19 @@ body {
 #onboarding-wrap ~ .bottom-nav {display: none;}
 
 #wrap,
-#detail-wrap {display: none;}
+#detail-wrap {
+  overflow: visible;
+  height: auto;
+  display: none;
+}
 
 body.is-main #wrap {display: block;}
 body.is-detail #detail-wrap {display: block;}
+
+.app-scroll {
+  height: 100vh;
+  overflow-y: auto;
+}
 
 .onboarding-container {
   width: 390px;
@@ -378,6 +390,7 @@ body {
   color: inherit;
   display: block;
   margin-top: 50px;
+  cursor: pointer;
 }
 .shop-link:hover .shop-bigbox {
   opacity: 0.9;
@@ -934,10 +947,14 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 390px;
+  max-width: 390px;
   max-height: 90vh;
   background: #fff;
   border-radius: 20px 20px 0 0;
+  padding: 25px 20px;
+  overflow-y: auto;
   animation: slideUp 0.35s ease;
+  box-sizing: border-box;
 }
 @keyframes slideUp {
   from {
@@ -1385,7 +1402,6 @@ body {
   position: relative;
 }
 .footer-support {
-  border: 1px solid #000;
   position: absolute;
   top: 16%;
   left: 50%;
@@ -1395,40 +1411,36 @@ body {
   color: #765425;
 }
 
-/* goto, chat 버튼을 오른쪽 하단 고정 */
-.footer-action-btns {
+.footer-action-btns{
   position: fixed;
   bottom: 110px;
-  left: 50%;
-  transform: translateX(calc(-390px / 2 + 335px));
+  left: 47%;
+  transform: translateX(195px);
   display: flex;
   flex-direction: column;
+  gap: 15px;
   z-index: 5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.footer-action-btns.hide {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+
 .goto-btn, .chat-btn { 
   border: none;
   background-color: transparent;
-  width: 50px; 
-  height: 50px; 
-  font-size: 21px; 
+  width: 30px; 
+  height: 30px; 
   cursor: pointer; 
   transition: all 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 }
-.goto-btn:hover, .chat-btn:hover { transform: scale(1.1);}
 
 .support-list {
   display: none;
   flex-direction: column;
   position: absolute;
-  bottom: 48px;      /* 버튼 위로 뜨게 */
+  bottom: 48px;
   left: 50%;
   transform: translateX(-50%);
   background: #fff;
@@ -1623,16 +1635,5 @@ body {
   bottom:35px;
   margin-left: 50px;
 }
-/* .menu-lang,.menu-kr{cursor:pointer;}
-.menu-login,.menu-join{
-  margin-left:auto;
-  margin-right:9px;
-  color:#fff;
-  font-size:15px;
-  cursor:pointer;
-}
-
- */
-
 
 

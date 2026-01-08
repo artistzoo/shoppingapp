@@ -1,3 +1,4 @@
+
 // 온보딩 슬라이드 관련 변수
 let currentSlide = 1;
 
@@ -23,22 +24,24 @@ function nextSlide() {
 function startApp() {
   document.getElementById('onboarding-wrap').classList.add('hidden');
   document.getElementById('wrap').classList.add('show');
-  // bottom-nav 다시 노출
+  document.body.classList.add('is-main');
+  
+  // bottom-nav 표시
   const bottomNav = document.querySelector('.bottom-nav');
   if (bottomNav) bottomNav.style.display = 'flex';
 }
 
-// 로그인/회원/메뉴/챗 등
+// 로그인/회원가입/메뉴/챗
 function openLogin() {
-  alert('로그인 페이지로 이동!');
+  showMiniAlert('로그인 페이지로 이동!');
 }
 
 function openJoin() {
-  alert('회원가입 페이지로 이동!');
+  showMiniAlert('회원가입 페이지로 이동!');
 }
 
 function openChat() {
-  alert('문의사항/채팅화면 입니다!');
+  showMiniAlert('문의사항/채팅화면 입니다!');
 }
 
 function moveSection(id) {
@@ -46,6 +49,24 @@ function moveSection(id) {
   if (s) s.scrollIntoView({behavior:'smooth'});
 }
 
+// 커스텀 알림창
+function showMiniAlert(message) {
+  const modal = document.getElementById('purchaseModal');
+  const content = modal.querySelector('.modal-content');
+
+  content.style.width = '350px';
+  content.style.maxWidth = '350px';
+  content.innerHTML = `
+    <button class="modal-close" onclick="closePurchaseModal()">✕</button>
+    <div style="padding: 40px 20px; text-align: center;">
+      <p style="margin: 0; font-size: 15px; color: #765425;">
+        ${message}
+      </p>
+    </div>
+  `;
+
+  modal.classList.add('active');
+}
 
 // 메인 슬라이드
 let slideIdx = 0;
@@ -82,6 +103,8 @@ function initMainSlider() {
   showMainSlide(0);
   mainSliderAuto();
 }
+
+// 페이지 로드 시 초기화
 document.addEventListener('DOMContentLoaded', () => {
   initMainSlider();
 });
@@ -90,11 +113,11 @@ document.addEventListener('DOMContentLoaded', () => {
 let metaTabIdx = 0;
 let metaGalleryList = [
   ['image/index/marne.png','image/index/sopni1.png','image/index/cask1.png','image/index/weimar1.png','image/index/soie1.png','image/index/modle1.png'],
-  ['metaGallery1-0.jpg','metaGallery1-1.jpg','metaGallery1-2.jpg','metaGallery1-3.jpg','metaGallery1-4.jpg','metaGallery1-5.jpg'],
-  ['metaGallery2-0.jpg','metaGallery2-1.jpg','metaGallery2-2.jpg','metaGallery2-3.jpg','metaGallery2-4.jpg','metaGallery2-5.jpg'],
-  ['metaGallery3-0.jpg','metaGallery3-1.jpg','metaGallery3-2.jpg','metaGallery3-3.jpg','metaGallery3-4.jpg','metaGallery3-5.jpg'],
-  ['metaGallery4-0.jpg','metaGallery4-1.jpg','metaGallery4-2.jpg','metaGallery4-3.jpg','metaGallery4-4.jpg','metaGallery4-5.jpg'],
-  ['metaGallery5-0.jpg','metaGallery5-1.jpg','metaGallery5-2.jpg','metaGallery5-3.jpg','metaGallery5-4.jpg','metaGallery5-5.jpg'],
+  ['image/index/ainoa.png','image/index/epeul.png','image/index/cococay.png','image/index/nube.png','image/index/munaki.png','image/index/noll.png'],
+  ['image/index/multi1.jpg','image/index/multi2.jpg','image/index/multi3.jpg','image/index/multi4.jpg','image/index/multi5.jpg','image/index/multi6.jpg'],
+  ['image/index/sa1.png','image/index/sa2.png','image/index/sa3.png','image/index/sa4.png','image/index/sa5.png','image/index/sa6.png'],
+  ['image/index/candle1.jpg','image/index/candle2.jpg','image/index/candle3.jpg','image/index/candle4.jpg','image/index/candle5.jpg','image/index/candle6.jpg'],
+  ['image/index/di1.jpg','image/index/di2.jpg','image/index/di3.jpg','image/index/di4.jpg','image/index/di5.jpg','image/index/di6.jpg'],
 ];
 let metaActiveImgIdx = 0;
 
@@ -153,19 +176,14 @@ function changeJournalSlide(pageIndex) {
 
 // Support 토글
 function toggleSupport() {
-  const el = document.getElementById('supportList');
-  if (el) {
-    el.classList.toggle('active');
-  }
-}
-function toggleSupport() {
   const list = document.getElementById('supportList');
   const btn = document.querySelector('.support-btn');
 
-  list.classList.toggle('active');
-  btn.classList.toggle('active');
+  if (list && btn) {
+    list.classList.toggle('active');
+    btn.classList.toggle('active');
+  }
 }
-
 
 // 외부 클릭 시 support-list 닫기
 document.addEventListener('click', function(e) {
@@ -175,6 +193,7 @@ document.addEventListener('click', function(e) {
   if (supportBtn && supportList) {
     if (!supportBtn.contains(e.target) && !supportList.contains(e.target)) {
       supportList.classList.remove('active');
+      supportBtn.classList.remove('active');
     }
   }
 });
@@ -200,29 +219,63 @@ function toggleSideAccordion(i) {
   });
 }
 
-/* 스크롤 */
+// 스크롤 이벤트 - footer-action-btns 표시/숨김
 window.addEventListener('scroll', () => {
   const btns = document.querySelector('.footer-action-btns');
   if (!btns) return;
 
-  if (window.scrollY < 1000) {
-    btns.classList.add('hide');
-  } else {
+  if (window.scrollY > 400 && window.scrollY <= 2000) {
     btns.classList.remove('hide');
+  } else {
+    btns.classList.add('hide');
   }
-});
 
-/* detail_____________ */
-/* 구매하기버튼 */
+});
+function getRealScroller() {
+  const docScroller = document.scrollingElement || document.documentElement;
+
+  const candidates = [
+    document.body.classList.contains('is-detail')
+      ? document.getElementById('detail-wrap')
+      : document.getElementById('wrap'),
+    docScroller,
+    document.body
+  ].filter(Boolean);
+
+  for (const el of candidates) {
+    if (el.scrollHeight > el.clientHeight + 1) return el;
+  }
+
+  return docScroller;
+}
+
+function goToTop() {
+  const scroller = getRealScroller();
+  scroller.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+
+
+
+/* ===== DETAIL 페이지 ===== */
+
+// 구매하기 모달
 function openPurchaseModal() {
-  document.getElementById('purchaseModal').classList.add('active');
+  const modal = document.getElementById('purchaseModal');
+  const content = modal.querySelector('.modal-content');
+  
+  // 원래 스타일로 복원
+  content.style.width = '390px';
+  content.style.maxWidth = '390px';
+  
+  modal.classList.add('active');
 }
 
 function closePurchaseModal() {
   document.getElementById('purchaseModal').classList.remove('active');
 }
 
-/* 탭버튼 */
+// 탭 전환
 function changeTab(type) {
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.remove('active');
@@ -235,9 +288,8 @@ function changeTab(type) {
   document.querySelector(`.tab-btn[onclick*="${type}"]`).classList.add('active');
   document.getElementById(`tab-${type}`).classList.add('active');
 }
-/* main-> detail */
-document.body.classList.add('is-main');
 
+// Main ↔ Detail 전환
 function openDetail() {
   document.body.classList.remove('is-main');
   document.body.classList.add('is-detail');

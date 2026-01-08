@@ -8,10 +8,16 @@
 
 </head>
 <body>
+  <!-- 온보딩 전에 배치 -->
   <div class="footer-action-btns">
-      <button class="chat-btn" onclick="openChat()"><img src="image/chat.png" alt="icon"></button>
-      <button class="goto-btn" onclick="window.scrollTo({top:0,behavior:'smooth'});"><img src="image/goto.png" alt="icon"></button>
+    <button class="chat-btn" onclick="openChat()">
+      <img src="image/chat.png" alt="chat icon">
+    </button>
+    <button class="goto-btn" onclick="goToTop()">
+      <img src="image/goto.png" alt="goto top icon">
+    </button>
   </div>
+  
   <!-- ONBOARDING -->
   <div id="onboarding-wrap">
     <div class="onboarding-container">
@@ -640,9 +646,8 @@
           개인정보관리책임자 정지호 개인정보처리방침 호스팅(주)아임웹<br>
         </span>
       </div>
-      
     </footer>
-  
+
   <script src="/js/index.js"></script>
 
 </body>
